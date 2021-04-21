@@ -59,7 +59,10 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 - [React.js](https://reactjs.org)
 - [Next.js](https://nextjs.org)
-- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [TypeScript](https://www.typescriptlang.org)
+- [Sass](https://sass-lang.com)
+- [date-fns](https://date-fns.org)
+- [json-server](https://github.com/typicode/json-server)
 
 ---
 
