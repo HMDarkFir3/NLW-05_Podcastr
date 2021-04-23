@@ -2,6 +2,7 @@
 import React from "react";
 
 //Next
+import Link from "next/link";
 import Image from "next/image";
 import { GetStaticProps } from "next";
 
@@ -31,27 +32,12 @@ interface Episode {
   published_at: string;
   publishedAt: string;
   thumbnail: string;
-  description: string;
   url: string;
   duration: number;
   durationAsString: string;
 }
 
 export default function Home(props: HomeProps) {
-  /// SPA
-  /*useEffect(() => {
-    fetch("http://localhost:3333/episodes")
-      .then((response) => response.json())
-      .then((data) => console.log(data));
-  }, []);*/
-  /* ------------------------------------------ */
-  ///SSR
-  /*return (
-   <div>
-      <p>{JSON.stringify(props.episodes)}</p>
-   </div> 
-  );*/
-
   const { latestEpisodes, allEpisodes } = props;
 
   return (
@@ -72,7 +58,9 @@ export default function Home(props: HomeProps) {
                 />
 
                 <div className={styles.episodeDetails}>
-                  <a href="">{episode.title}</a>
+                  <Link href={`/episodes/${episode.id}`}>
+                    <a>{episode.title}</a>
+                  </Link>
                   <p>{episode.members}</p>
                   <span>{episode.publishedAt}</span>
                   <span>{episode.durationAsString}</span>
@@ -92,12 +80,14 @@ export default function Home(props: HomeProps) {
 
         <table cellSpacing={0}>
           <thead>
-            <th></th>
-            <th>Podcast</th>
-            <th>Integrantes</th>
-            <th>Data</th>
-            <th>Duração</th>
-            <th></th>
+            <tr>
+              <th></th>
+              <th>Podcast</th>
+              <th>Integrantes</th>
+              <th>Data</th>
+              <th>Duração</th>
+              <th></th>
+            </tr>
           </thead>
           <tbody>
             {allEpisodes.map((episode) => {
@@ -113,7 +103,9 @@ export default function Home(props: HomeProps) {
                     />
                   </td>
                   <td>
-                    <a href="">{episode.title}</a>
+                    <Link href={`/episodes/${episode.id}`} prefetch={true}>
+                      <a>{episode.title}</a>
+                    </Link>
                   </td>
                   <td>{episode.members}</td>
                   <td style={{ width: 100 }}>{episode.publishedAt}</td>
@@ -133,21 +125,6 @@ export default function Home(props: HomeProps) {
   );
 }
 
-///SSR
-/*
-export async function getServerSideProps() {
-  const response = await fetch("http://localhost:3333/episodes");
-  const data = await response.json();
-
-  return {
-    props: {
-      episodes: data,
-    },
-  };
-}
-*/
-
-//SSG
 export const getStaticProps: GetStaticProps = async () => {
   const { data } = await api.get("episodes", {
     params: {
@@ -166,7 +143,6 @@ export const getStaticProps: GetStaticProps = async () => {
         locale: ptBR,
       }),
       thumbnail: episode.thumbnail,
-      description: episode.description,
       url: episode.file.url,
       duration: Number(episode.file.duration),
       durationAsString: convertDurationToTimeString(
