@@ -1,5 +1,5 @@
 //React
-import React from "react";
+import React, { useContext } from "react";
 
 //Next
 import Link from "next/link";
@@ -15,6 +15,9 @@ import api from "../services/api";
 
 //Utils
 import { convertDurationToTimeString } from "../utils/convertDurationToTimeString";
+
+//Context
+import { PlayerContext } from "../contexts/PlayerContext";
 
 //Style
 import styles from "./styles/home.module.scss";
@@ -39,6 +42,8 @@ interface Episode {
 
 export default function Home(props: HomeProps) {
   const { latestEpisodes, allEpisodes } = props;
+
+  const { play } = useContext(PlayerContext);
 
   return (
     <div className={styles.homePage}>
@@ -66,7 +71,7 @@ export default function Home(props: HomeProps) {
                   <span>{episode.durationAsString}</span>
                 </div>
 
-                <button type="button">
+                <button type="button" onClick={() => play(episode)}>
                   <img src="/play-green.svg" alt="Toca episódio" />
                 </button>
               </li>
