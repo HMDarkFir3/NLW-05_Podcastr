@@ -43,6 +43,10 @@ export default function Episodes(props: EpisodesProps) {
 
   const router = useRouter();
 
+  if (router.isFallback) {
+    return <p>Carregando</p>;
+  }
+
   return (
     <div className={styles.episode}>
       <div className={styles.thumbnailContainer}>
@@ -79,8 +83,24 @@ export default function Episodes(props: EpisodesProps) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
+  const { data } = await api.get("episodes", {
+    params: {
+      _limit: 2,
+      _sort: "published_at",
+      _order: "desc",
+    },
+  });
+
+  const paths = data.map((episode) => {
+    return {
+      params: {
+        slug: episode.id,
+      },
+    };
+  });
+
   return {
-    paths: [],
+    paths,
     fallback: "blocking",
   };
 };
