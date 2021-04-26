@@ -66,6 +66,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 - [Next.js](https://nextjs.org)
 - [TypeScript](https://www.typescriptlang.org)
 - [Sass](https://sass-lang.com)
+- [axios](https://github.com/axios/axios)
 - [date-fns](https://date-fns.org)
 - [rc-slider](https://www.npmjs.com/package/rc-slider)
 - [json-server](https://github.com/typicode/json-server)
