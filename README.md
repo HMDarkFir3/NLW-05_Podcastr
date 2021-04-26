@@ -67,6 +67,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 - [TypeScript](https://www.typescriptlang.org)
 - [Sass](https://sass-lang.com)
 - [date-fns](https://date-fns.org)
+- [rc-slider](https://www.npmjs.com/package/rc-slider)
 - [json-server](https://github.com/typicode/json-server)
 
 ---
