@@ -1,5 +1,5 @@
 //React
-import React from "react";
+import React, { useContext } from "react";
 
 //Next
 import { useRouter } from "next/router";
@@ -10,6 +10,9 @@ import { GetStaticPaths, GetStaticProps } from "next";
 //date-fns
 import { format, parseISO } from "date-fns";
 import ptBR from "date-fns/locale/pt-BR";
+
+//Hook
+import { usePlayer } from "../../hooks/usePlayer";
 
 //Api
 import api from "../../services/api";
@@ -41,6 +44,8 @@ interface Episode {
 export default function Episodes(props: EpisodesProps) {
   const { episode } = props;
 
+  const { play } = usePlayer();
+
   const router = useRouter();
 
   if (router.isFallback) {
@@ -62,7 +67,7 @@ export default function Episodes(props: EpisodesProps) {
           height={160}
           objectFit="cover"
         />
-        <button type="button">
+        <button type="button" onClick={() => play(episode)}>
           <img src="/play.svg" alt="Tocar episódio" />
         </button>
       </div>

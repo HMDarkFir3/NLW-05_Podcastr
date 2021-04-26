@@ -1,5 +1,5 @@
 //React
-import React, { useContext } from "react";
+import React from "react";
 
 //Next
 import Link from "next/link";
@@ -16,8 +16,8 @@ import api from "../services/api";
 //Utils
 import { convertDurationToTimeString } from "../utils/convertDurationToTimeString";
 
-//Context
-import { PlayerContext } from "../contexts/PlayerContext";
+//Hook
+import { usePlayer } from "../hooks/usePlayer";
 
 //Style
 import styles from "./styles/home.module.scss";
@@ -43,7 +43,7 @@ interface Episode {
 export default function Home(props: HomeProps) {
   const { latestEpisodes, allEpisodes } = props;
 
-  const { playList } = useContext(PlayerContext);
+  const { playList } = usePlayer();
 
   const episodeList = [...latestEpisodes, ...allEpisodes];
 
