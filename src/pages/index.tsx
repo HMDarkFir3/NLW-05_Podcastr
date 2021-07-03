@@ -2,6 +2,7 @@
 import React from "react";
 
 //Next
+import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import { GetStaticProps } from "next";
@@ -49,6 +50,10 @@ export default function Home(props: HomeProps) {
 
   return (
     <div className={styles.homePage}>
+      <Head>
+        <title>Home | Podcastr</title>
+      </Head>
+
       <section className={styles.latestEpisodes}>
         <h2>Últimos lançamentos</h2>
 

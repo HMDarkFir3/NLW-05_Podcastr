@@ -2,6 +2,7 @@
 import React, { useContext } from "react";
 
 //Next
+import Head from "next/head";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
@@ -54,6 +55,10 @@ export default function Episodes(props: EpisodesProps) {
 
   return (
     <div className={styles.episode}>
+      <Head>
+        <title>{episode.title} | Podcastr</title>
+      </Head>
+
       <div className={styles.thumbnailContainer}>
         <Link href="/">
           <button type="button">
