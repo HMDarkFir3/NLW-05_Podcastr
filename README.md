@@ -45,7 +45,7 @@ $ yarn install
 # Run the Application in Development
 $ yarn dev
 
-# The server will log in port:3000 - `http://localhost:300`
+# The server will log in port:3000 - `http://localhost:3000`
 
 # Run the API server
 $ yarn server
