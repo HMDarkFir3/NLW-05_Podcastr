@@ -59,8 +59,8 @@ $ yarn server
 
 The project was developed using the following technologies:
 
-- [React.js](https://reactjs.org)
-- [Next.js](https://nextjs.org)
+- [ReactJS](https://reactjs.org)
+- [NextJS](https://nextjs.org)
 - [TypeScript](https://www.typescriptlang.org)
 - [Sass](https://sass-lang.com)
 - [Axios](https://github.com/axios/axios)
