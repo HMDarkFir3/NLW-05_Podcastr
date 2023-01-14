@@ -29,10 +29,10 @@ Para clonar e executar este aplicativo, você precisará de [Git](https://git-sc
 
 ```bash
 # Clone este repositório
-$ git clone https://github.com/HMDarkFir3/NLW-05_Podcastr.git
+$ git clone https://github.com/HMDarkFir3/podcastr.git
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd NLW-05_Podcastr
+$ cd podcastr
 ```
 
 ### 🎲 Rodando a Aplicação
@@ -62,10 +62,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 - [Next.js](https://nextjs.org)
 - [TypeScript](https://www.typescriptlang.org)
 - [Sass](https://sass-lang.com)
-- [axios](https://github.com/axios/axios)
-- [date-fns](https://date-fns.org)
-- [rc-slider](https://www.npmjs.com/package/rc-slider)
-- [json-server](https://github.com/typicode/json-server)
+- [Axios](https://github.com/axios/axios)
 
 ---
 
