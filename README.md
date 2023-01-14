@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">
-  🚀 Concluído 🚀
+  🚀 Done 🚀
 </h1>
 
 <p align="center" >
@@ -16,47 +16,48 @@
   
 ---
 
-## 📋 Sobre
-Página de um podcast.
+## 📋 About
+
+Podcast page.
 
 ---
 
-## 📂 Como rodar este projeto
+## 📂 How to run this project
 
-Para clonar e executar este aplicativo, você precisará de [Git](https://git-scm.com) e [NodeJs](https://nodejs.org/en/) Instalado em seu computador.
+To clone and run this app, you will need to [Git](https://git-scm.com) and [NodeJs](https://nodejs.org/en/).
 
-### 🌀 Clonando o repositório
+### 🌀 Cloning the repository
 
 ```bash
-# Clone este repositório
+# Clone this repository
 $ git clone https://github.com/HMDarkFir3/podcastr.git
 
-# Acesse a pasta do projeto no terminal/cmd
+# Access the project folder in the terminal/cmd
 $ cd podcastr
 ```
 
 ### 🎲 Rodando a Aplicação
 
 ```bash
-# Instale as dependências
+# Install dependencies
 $ yarn install
 
-# Execute a Aplicação em Desenvolvimento
+# Run the Application in Development
 $ yarn dev
 
-# O servidor inciará na porta:3000 - acesse http://localhost:3000
+# The server will log in port:3000 - `http://localhost:300`
 
-#Execute o servidor da API
+# Run the API server
 $ yarn server
 
-# O servidor inciará na porta:3333 - acesse http://localhost:3333
+# The server will log in port:3333 - `http://localhost:3333`
 ```
 
 ---
 
-## 🚀 Tecnologias Utilizadas
- 
-O projeto foi desenvolvido utilizando as seguintes tecnologias:
+## 🚀 Technologies Used
+
+The project was developed using the following technologies:
 
 - [React.js](https://reactjs.org)
 - [Next.js](https://nextjs.org)
@@ -66,17 +67,17 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 ---
 
-## 💪 Como contribuir para o projeto
+## 💪 How to contribute to the project
 
-1. Faça um **fork** do projeto.
-2. Crie uma nova branch com as suas alterações: `git checkout -b my-feature`
-3. Salve as alterações e crie uma mensagem de commit contando o que você fez: `git commit -m "feature: My new feature"`
-4. Envie as suas alterações: `git push origin my-feature`
-> Caso tenha alguma dúvida confira este [guia de como contribuir no GitHub](https://github.com/firstcontributions/first-contributions)
+1. Make a **fork** of the project.
+2. Create a new branch with your changes: `git checkout -b my-feature`
+3. Save the changes and create a commit message telling you what you've done: `git commit -m "feature: My new feature"`
+4. Submit your changes: `git push origin my-feature`
+   > If you have any questions check out this [guide on how to contribute to GitHub](https://github.com/firstcontributions/first-contributions)
 
 ---
 
-## 🧑 Autor
+## 🧑 Author
 
 <img style="border-radius: 50%;" src="https://github.com/HMDarkFir3.png" width="150px;" alt=""/>
  <h4>Henrique Luís Oliveira Marques</h4>
@@ -87,7 +88,8 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 ---
 
-## 📝 Licença
-Este projeto esta sobe a licença MIT. Veja a [LICENÇA](./LICENSE) para saber mais. 
+## 📝 License
+
+This project is under the MIT license. See the [LICENSE](./LICENSE) to learn more.
 <br>
-👋🏽 [Entre em contato!](https://www.linkedin.com/in/henrique-luís-oliveira-marques-3406361a7/)
+👋🏽 [Get in touch!](https://www.linkedin.com/in/henrique-luís-oliveira-marques-3406361a7/)
